@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <form action="http://localhost:8080/createPups" method="POST">
+            <label for="puppyName">Name</label>
+            <input type="text" name="name" id="puppyName">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <section>
+        <form action="">
+          <fieldset>
+            <label for="userName">Username</label>
+            <input id="userName" type="text" required />
+            <label for="password">Password</label>
+            <input id="password" type="password" required />
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+            <label for="rememberMe">Remember Me</label>
+            <input id="rememberMe" type="checkbox" />
+          </fieldset>
+          <button type="reset">Reset</button>
+          <button>Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
