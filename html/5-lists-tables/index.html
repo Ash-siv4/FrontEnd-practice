@@ -9,12 +9,14 @@
 </head>
 
 <body>
-
     <main>
+<!------------------------------------------------------------->
         <section>
             <h2>Lists</h2>
             <h3>Unordered</h3>
+            <!-- <ul> -unordered list -->
             <ul>
+                <!-- <li> -list item -->
                 <li>
                     Eggs
                 </li>
@@ -26,7 +28,10 @@
                 </li>
             </ul>
             <h3>Ordered</h3>
+            <!-- <ol> -ordered list -->
             <ol type="A">
+            <!-- type="1" -numbers, type="A" -uppercase letters, type="a" -lowercase letters, type="I" - uppercase roman numerals, type="i" -lowercase roman numerals -->
+            <!-- <ol> for default numbered lists -->
                 <li>
                     Eggs
                 </li>
@@ -38,10 +43,13 @@
                 </li>
             </ol>
         </section>
+<!------------------------------------------------------------->
         <section>
             <h2>Tables</h2>
             <table>
+                <!-- <thead> -table header content -->
                 <thead>
+                    <!-- <th> -table heading -->
                     <th>
                         col 1
                     </th>
@@ -49,8 +57,11 @@
                         col 2
                     </th>
                 </thead>
+                <!-- <tbody> -table body content -->
                 <tbody>
+                <!-- <tr> -table row -->
                 <tr>
+                    <!-- <td> -table data -->
                     <td>
                         hello
                     </td>
@@ -66,10 +77,37 @@
             </tbody>
             </table>
         </section>
+<!------------------------------------------------------------->
         <section>
             <h3>iFrames</h3>
+            <!-- An HTML iframe is used to display a web page within a web page. -->
+            <!-- 
+                An HTML iframe is defined with the <iframe> tag.
+                The src attribute specifies the URL (web address) of the inline frame page.
+                layout: <iframe src="URL"></iframe> 
+            -->
             <iframe src="https://en.wikipedia.org/wiki/HTML_element" frameborder="0"></iframe>
+            <!--
+              We can also add height and width attributes to specify the size of the iframe page.
+              (Note:The height and width are specified in pixels by default)
+              <iframe src="https://en.wikipedia.org/wiki/HTML_element#Frames" height="200" width="600"></iframe>
+              ----------------
+              We can also set the height and width via CSS:
+              <iframe src="demo_iframe.htm" style="height:200px;width:600px;"></iframe>
+              ----------------
+              By default, an iframe has a border around it.
+              We can remove the border, by adding the style attribute and using the CSS border property:
+              <iframe src="demo_iframe.htm" style="border:none;"></iframe>
+              ----------------
+              With CSS, we can also change the size, style and colour of the iframe's border:
+              <iframe src="demo_iframe.htm" style="border:2px solid red;"></iframe>
+              An iframe can be used as the target frame for a link.
+              The target attribute of the link must refer to the name attribute of the iframe. Looking at the example below the iframe has name="iframe_a and the paragraph has target="iframe_a. As a result when the the a href is clicked it will then be displayed in the iframe:
+              <iframe height="300px" width="100%" src="qa_demo_iframe.htm" name="iframe_a"></iframe>
+              <p><a href="https://en.wikipedia.org/wiki/HTML_element#Frames" target="iframe_a">Wiki on iFrames</a></p>
+            -->
         </section>
+<!------------------------------------------------------------->
     </main>
 </body>
 
