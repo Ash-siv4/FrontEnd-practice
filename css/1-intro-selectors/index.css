@@ -1,0 +1,32 @@
+form {
+    color: darkblue;
+}
+
+div > * {
+    color: red;
+}
+
+div p {
+    color: aqua;
+}
+
+div > p {
+    color: orange;
+}
+
+p#whatUpP {
+    color: brown;
+}
+
+.myText {
+    color: yellow;
+}
+
+#whatUpP {
+    color: pink;
+}
+
+p {
+    color: purple;
+}
+/* iz best */

@@ -1,0 +1,25 @@
+a {
+    text-decoration: unset;
+}
+a:visited {
+    color: purple;
+}
+
+h2 {
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+}
+
+a:link  {
+    color: blue;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+p::first-letter {
+    font-weight: bold;
+    color: red;
+}
