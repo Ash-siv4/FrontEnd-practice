@@ -1,5 +1,14 @@
 "use strict"
 
+/*
+function getPups(){
+  fetch("http://localhost:8080/getPuppies")
+  .then(res => {
+    console.log(res)
+  }).catch(err => console.error(err))
+}
+*/
+
 const contextPath = "http://localhost:8080";
 const output = document.getElementById("output");
 
@@ -18,12 +27,14 @@ function getPuppies() {
     }).catch(err => console.error(err))
 }
 
-{/* <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div> */}
+{
+  /* <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> */
+}
 
 function renderPuppy(puppy) {
 
@@ -84,15 +95,15 @@ document.getElementById("puppiesForm").addEventListener('submit', function (even
   };
 
   axios.post(contextPath + "/createPups", data, {
-    headers: {
-      "Content-Type": "application/json", // sending JSON
-      "Accept": "application/json" // gimme JSON
-    }
-  }).then(() => {
-    this.reset();
-    this.name.focus();
-    getPuppies();
-  })
+      headers: {
+        "Content-Type": "application/json", // sending JSON
+        "Accept": "application/json" // gimme JSON
+      }
+    }).then(() => {
+      this.reset();
+      this.name.focus();
+      getPuppies();
+    })
     .catch(err => console.error(err));
 
 });
