@@ -71,7 +71,20 @@ function renderPuppy(puppy) {
   deletePuppyButton.addEventListener('click', () => deletePuppy(puppy.id));
   puppyFooter.appendChild(deletePuppyButton);
 
+  const editPuppyButton = document.createElement("a");
+  editPuppyButton.className = "card-link";
+  editPuppyButton.innerText = "Edit";
+  editPuppyButton.addEventListener('click', () => editPuppy(puppy.id));
+  puppyFooter.appendChild(editPuppyButton);
+
   return newColumn;
+}
+
+// EDIT FUNCTIONALITY INCOMPLETE
+function editPuppy(id) {
+  axios.put(contextPath + "/updatePup/" + id)
+    .then(() => getPuppies())
+    .catch(err => console.error(err));
 }
 
 function deletePuppy(id) {
